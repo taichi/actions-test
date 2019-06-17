@@ -5,6 +5,7 @@ Toolkit.run(async tools => {
   tools.log('Welcome to this example!');
   tools.log(tools.getPackageJSON());
   tools.log(process.cwd());
-  await tools.runInWorkspace('ls', ['-l']);
+  const result = await tools.runInWorkspace('ls', ['-l']);
+  tools.log(result);
   tools.exit.success('We did it!');
 })
