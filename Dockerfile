@@ -22,7 +22,7 @@ LABEL "com.github.actions.color"="gray-dark"
 COPY package*.json ./
 
 RUN ls -l
-RUN ls -l /github/workspace
+RUN ls -l /home
 
 # Install dependencies
 RUN npm ci
