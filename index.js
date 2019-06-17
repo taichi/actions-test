@@ -4,5 +4,6 @@ const { Toolkit } = require('actions-toolkit')
 Toolkit.run(async tools => {
   tools.log('Welcome to this example!');
   tools.log(tools.getPackageJSON());
+  tools.log(tools.workspace);
   tools.exit.success('We did it!');
 })
