@@ -11,7 +11,7 @@
 FROM node:slim
 
 # Labels for GitHub to read your action
-LABEL "com.github.actions.name"="npm-check-update"
+LABEL "com.github.actions.name"="actions-test"
 LABEL "com.github.actions.description"="Find newer versions of package dependencies"
 # Here are all of the available icons: https://feathericons.com/
 LABEL "com.github.actions.icon"="git-pull-request"
@@ -20,6 +20,8 @@ LABEL "com.github.actions.color"="gray-dark"
 
 # Copy the package.json and package-lock.json
 COPY package*.json ./
+
+RUN ls -l
 
 # Install dependencies
 RUN npm ci
